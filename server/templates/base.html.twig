@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тестовое задание</title>
+</head>
+
+<body>
+<h1>Задачи</h1><br>
+{% for task in tasks %}
+    ИД: {{ task.id }}<br>
+    {{ task.caption }}<br>
+    {{ task.description }}<br>
+    Дата: {{ task.date|date("Y-m-d")}}<br>
+    Исполнитель: {{ task.performer.username }}<br>
+    <br>
+{% endfor %}
+</body>
+
+</html>
